@@ -18,3 +18,22 @@ b=200
 a, b = b, a   #using comma assignment
 print(a)
 print(b)
+
+#is operator will give the Boolean value (a=1 & b=2) print(a is b) > True
+
+#id() function:
+#it gives id of the object
+print(id(5))
+s=10
+print(id(s))
+r=s
+print(id(r))
+
+#Type(): is a built in function and tells the data type of var
+print(type(10)) 
+print(type(10+5j)) 
+print(type(True))
+print(type("hello python"))
+print(type([1, 2, 3]))
+
+
