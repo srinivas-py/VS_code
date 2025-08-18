@@ -11,7 +11,7 @@ print("to FNF")
 
 print("python", "is", "fun", sep="-")  # Output: python-is-fun
 
-# inpput() function
+# input() function
 name = input("Enter your name : ")
 age = input("enter your age is : ")
 print(name + age)  # Prompts user for input
