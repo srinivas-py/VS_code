@@ -2,50 +2,53 @@
 l = [10, 20, 30, 40, 50]
 print(l[0 : 5 : 2]) # [start - stop - increment]
 
-# Introduction to object oriented programming
-# oops > we break the code onto a set of entities ans these entities are talk to each other and it contains data & methods
+# OOP is a programming paradigm based on the concept of "objects", which can contain data (attributes) and code (methods).
+# Instead of writing procedural code, we model real-world entities as classes and objects.
+# Key Idea: Break complex problems into smaller, manageable pieces (objects) that interact with each other.
+# Example: A simple class
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand    # data attribute
+        self.model = model
 
-# encapsulation - refers to data hiding
-# It helps in consistency & reduce redudency
-# Bundling of data member and method
-from abc import ABC, abstractmethod  # (11 & 12 - abstart class)
-class Polygon(ABC):
-    def __init__(self, color):
-        self.color = color
-    @abstractmethod
-    def printsides(self):            # (15, 16 & 17 - abstart method)
-        pass
+    def start(self):          # method
+        print(f"{self.brand} {self.model} is starting.")
 
-class triangle(Polygon):
-    def __init__(self, color):
-        super().__init__(color)
-    def printsides(self):
-        print("there are 3 sides")
+my_car = Car("Toyota", "welfire")  # Creating objects (instances)
+my_car.start()  # Output: Toyota welfire is starting.
 
-# decoraters in python
-# functions are first class objects
-# function can have innner functions
-# decorater is a func that takes another func as an argument and enhances the behaviour of the passed functions
+# Core OOP Concepts in Python
+# Class: Blueprint or template for creating objects.
+# Object: Instance of a class.
 
-def decfun(f):
-    def innerfun():
-        print("inside decfun")
-        f()
-    return innerfun
+#Encapsulation:
+# Encapsulation = Data + Methods bundled together + Controlled access
+# It restricts direct access to some components (data hiding).
+# Achieved using private and protected members.
+# Data integrity, security, reduces complexity.
 
-@decfun
-def fun():
-    print("inside func1")
-fun()
+# Access Modifiers in Python (by convention):
+# Public: name → accessible everywhere.
+# Protected: _name → should not be accessed outside class (but possible).
+# Private: __name → name-mangled to prevent accidental access.
 
-# ASCII codes
-# [0 - 9] = [48 - 57]
-# [A - Z] = [65 - 90]
-# [a - z] = [97 - 122]
-# ord will use to get the ascii value
-print('A')
-print(ord('A'))
-print(ord('a'))
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner  # public
+        self._balance = balance  # protected (by convention)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+
+    def get_balance(self):  # controlled access
+        return self._balance
+
+
+acc = BankAccount("John", 1000)
+print(acc.owner)  # OK
+print(acc.get_balance())  # Preferred way
+
 
 # exception handling > try catch method
 try:
@@ -69,4 +72,21 @@ except:
     print('unknown error')
 finally:
     print('finally will end the code either by terminating / completing')
+
+
+# Class > Blueprint for objects > class MyClass:
+# Object > Instance of a class > obj = MyClass()
+# Encapsulation > Bundle data + methods; control access > _protected , __private, getters/setters
+# Abstraction > Hide complexity; show essentials, ABC > @abstractmethod
+# Inheritance > Reuse code from parent > class Child(Parent):
+# Polymorphism > Same interface, different behavior > Method overriding
+
+# Why Use OOP in Python?
+# ✅ Modularity: Code organized into classes.
+# ✅ Reusability: Inheritance avoids rewriting code.
+# ✅ Maintainability: Changes in one class don’t break others.
+# ✅ Scalability: Easy to extend with new features.
+# ✅ Real-world modeling: Natural way to represent entities.
+
+
 

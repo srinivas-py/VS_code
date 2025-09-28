@@ -1,3 +1,6 @@
+# Inheritance = Reusing code from parent (base) class in child (derived) class
+# Promotes code reusability and hierarchical classification.
+
 # inheritance in python
 class Person:
     def __init__(self, ID, name):

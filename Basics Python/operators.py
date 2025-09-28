@@ -29,7 +29,7 @@ l2 = [1, 2, 3]
 print(l1 is l2)  # False, because they are different objects in memory
 print(l1 is not l2)  # True, because they are different objects in memory
 
-# membership operators > in not in
+# membership operators > in, not in
 l3 = [1, 2, 3, 4, 5]
 print(3 in l3)  # True, because 3 is an element of the list
 print(6 not in l3)  # True, because 6 is not an element
