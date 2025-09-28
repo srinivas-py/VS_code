@@ -1,6 +1,6 @@
 # Dictionary is a collection of key value pairs
 # items are unordered 
-# keys are unique (values can be duplicate) 
+# keys are unique (values cannot be duplicate)
 # values can be of any data type
 # Dictionary is defined using curly braces {}
 

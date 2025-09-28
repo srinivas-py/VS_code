@@ -37,7 +37,7 @@ print(L.count(90))  # Counting occurrences of 90 in the list
 L.clear()  # Clearing the list  
 print(L)  # Should print an empty list
 # List slicing
-L = [1, 2, 3, 4, 5, 6   , 7, 8, 9, 10]
+L = [1, 2, 3, 4, 5, 6 , 7, 8, 9, 10]
 print(L[2:5])  # Slicing from index 2 to 4 (5 is not included)
 print(L[:5])  # Slicing from the start to index 4     
 
