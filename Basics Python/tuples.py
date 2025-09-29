@@ -1,5 +1,5 @@
 # Tuples are immutable sequences in Python, similar to lists but cannot be changed after creation
-# Tuples are fater then lists and can be used to store a collection of items
+# Tuples are faster then lists and can be used to store a collection of items
 # Tuples are defined using parentheses () and can contain mixed data types
 t = (10, 20, 'abc', 35.5, True)  # Tuple with mixed data types
 print(t)

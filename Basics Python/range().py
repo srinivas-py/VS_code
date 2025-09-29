@@ -1,7 +1,7 @@
 # range() in python
 # range() is a built-in function that generates a sequence of numbers
 # It is commonly used in for loops to iterate over a sequence of numbers
-# range(start, stop, step) generates numbers starting from 'start' to 'stop -
+# range(start, stop, step) generates numbers starting from 'start' to 'stop - 1
 
 r = range(0, 5)  # Generates numbers from 0 to 4
 print(r)  # Display the range object
