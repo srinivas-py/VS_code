@@ -38,8 +38,12 @@ Suitable for collections that need to change during program execution.	 Suitable
 Takes more memory due to extra data structures for mutability.	Takes less memory due to simpler internal structure.
 Supports methods like append(), remove(), pop(), extend().	Does not support these methods since it is immutable '''
 
-# Interpreter: Executes code directly, making debugging easier.
-# Compiler: Converts the entire code into machine language before execution, resulting in faster runtime.
+# Interpreter = Cooking Step-by-Step with Help
+# An interpreter is like a friend who reads the recipe one line at a time and tells you exactly what to do right then.
+# Example: Python uses an interpreter.
+#  Compiler = Read Entire Recipe First, Then Cook Fast
+# A compiler is like reading the whole recipe first, understanding it completely, and turning it into your own super-efficient cooking plan before you even start.
+# C or C++ use a compiler.
 '''
 Difference Between Mutable and Immutable Types in Python
 Feature	    Mutable	                                        Immutable
@@ -177,13 +181,20 @@ for index, value in enumerate(['a', 'b', 'c', 'd']):
     print(index, value)
 
 # Q20. What are Decorators?
-# Decorators are a very powerful and useful tool in Python as they are the specific change that we make in Python syntax to alter functions easily.
+# Decorators in Python are a powerful feature that allows you to modify or extend the behavior of functions or classes without permanently changing their code.
+# How Decorators Work
+# A decorator is essentially a function that takes another function as an argument and returns a modified version of that function.
+#syntax
+'''@decorator_name
+def function_to_decorate():
+    pass'''
 
 # Q21. How do you debug a Python program?
 # By using this command we can debug a Python program:
 # $ python -m pdb python-script.py
 
-# Swapcase function
+# Swapcase function > The swapcase() method in Python is a built-in string method that converts all uppercase letters to lowercase and all lowercase letters to uppercase in a string.
+# Non-alphabet characters (like numbers, spaces, or symbols) remain unchanged.
 string = "Geeks for Geeks"
 print(string.swapcase())   #---> "gEEKSFORgEEKS"
 print(string[2:8])
@@ -206,6 +217,10 @@ print(sentence)
 # Instance Methods: Operate on an instance of the class (self) and can access and modify instance variables.
 # Class Methods: Operate on the class itself (cls) and cannot modify instance-specific data.
 # Static Methods: Do not operate on either instance or class. They are utility functions.
+
+# Instance method → Painting your house.
+# Class method → Updating the blueprint so all future houses use solar panels.
+# Static method → A calculator that tells you how much paint you’ll need
 
 # How is encapsulation implemented in Python, given that it lacks access modifiers like private or protected?
 # Encapsulation in Python is achieved using naming conventions:
